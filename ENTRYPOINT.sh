@@ -1,10 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 
 BASEDIR="/usr/lib/unifi-video"
 DATADIR="/config"
 
 # create our folders
-mkdir -p ${DATADIR}/data ${DATADIR}/logs
+mkdir -p ${DATADIR}/{data,logs}
 
 # Relink the DATADIR 
 [[ -L ${BASEDIR}/data && ! ${BASEDIR}/data -ef /config/data ]] && unlink ${BASEDIR}/data
