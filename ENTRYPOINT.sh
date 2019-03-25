@@ -4,7 +4,7 @@ BASEDIR="/usr/lib/unifi-video"
 DATADIR="/config"
 
 # create our folders
-mkdir -p ${DATADIR}/{data,logs}
+mkdir -p ${DATADIR}/data ${DATADIR}/logs
 
 # Relink the DATADIR 
 [[ -L ${BASEDIR}/data && ! ${BASEDIR}/data -ef /config/data ]] && unlink ${BASEDIR}/data
