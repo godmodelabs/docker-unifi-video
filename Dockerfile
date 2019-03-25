@@ -15,4 +15,4 @@ WORKDIR /usr/lib/unifi-video
 
 USER unifi-video
 
-ENTRYPOINT ENTRYPOINT.sh
+ENTRYPOINT /ENTRYPOINT.sh
