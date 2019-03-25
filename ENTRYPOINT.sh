@@ -21,4 +21,4 @@ mkdir -p \
 find /config ! -user unifi-video -exec chown -R unifi-video {} \;
 
 # Start application
-java -cp /usr/share/java/commons-daemon.jar:/usr/lib/unifi-video/lib/airvision.jar -Djava.security.egd=file:/dev/./urandom -Djava.library.path=/usr/lib/unifi-video/lib -Djava.awt.headless=true -Djavax.net.ssl.trustStore=/usr/lib/unifi-video/data/ufv-truststore -Dfile.encoding=UTF-8 com.ubnt.airvision.Main start
+sudo -u unifi-video java -cp /usr/share/java/commons-daemon.jar:/usr/lib/unifi-video/lib/airvision.jar -Djava.security.egd=file:/dev/./urandom -Djava.library.path=/usr/lib/unifi-video/lib -Djava.awt.headless=true -Djavax.net.ssl.trustStore=/usr/lib/unifi-video/data/ufv-truststore -Dfile.encoding=UTF-8 com.ubnt.airvision.Main start

@@ -13,6 +13,4 @@ VOLUME /config
 EXPOSE 7080/tcp 7443/tcp 6666/tcp 7442/tcp 7445/tcp 7446/tcp 7447
 WORKDIR /usr/lib/unifi-video
 
-USER unifi-video
-
 ENTRYPOINT /ENTRYPOINT.sh
