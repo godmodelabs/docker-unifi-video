@@ -17,7 +17,7 @@ mkdir -p ${DATADIR}/{data,logs}
 [[ ! -f ${DATADIR}/data/ufv-truststore ]] && cp -f ${BASEDIR}/etc/ufv-truststore ${DATADIR}/data/
 
 # Set permissions if necessary
-find /config ! -user unifi-video -exec chown -R unifi-video {} \;
+find /config ! -user unifi-video -exec chown unifi-video {} \;
 
 # Start application
 sudo -u unifi-video java -cp /usr/share/java/commons-daemon.jar:${BASEDIR}/lib/airvision.jar -Djava.security.egd=file:/dev/./urandom -Djava.library.path=${BASEDIR}/lib -Djava.awt.headless=true -Djavax.net.ssl.trustStore=${BASEDIR}/data/ufv-truststore -Dfile.encoding=UTF-8 com.ubnt.airvision.Main start
