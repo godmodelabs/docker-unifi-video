@@ -2,7 +2,7 @@ FROM openjdk:8-jre-stretch
 
 COPY ENTRYPOINT.sh .
 
-ADD https://dl.ubnt.com/firmwares/ufv/v3.10.10/unifi-video.Debian9_amd64.v3.10.10.deb unifi-video.deb
+ADD https://dl.ubnt.com/firmwares/ufv/v3.10.13/unifi-video.Debian9_amd64.v3.10.13.deb unifi-video.deb
 
 RUN apt update -q -y &&\
     apt install -q -y sudo psmisc lsb-release mongodb jsvc &&\
